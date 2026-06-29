@@ -1,0 +1,31 @@
+{
+  "id": "ewing-elig-rules-102",
+  "title": "Deterministic rule extractor (age, perf-status, labs, washout, negation)",
+  "project": "ewing-eligibility-structuring",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "informatics", "nlp"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "The deterministic rule extractor is the preferred, reproducible path for converting eligibility free-text into structured assertions, ahead of any LLM assist. It handles common patterns (age, performance status, lab thresholds, washout windows, prior-therapy negations) with unit and temporality. Ambiguous criteria must never be auto-completed; they route to the human-must-resolve queue and are withheld from release.",
+  "objective": "Build a deterministic rule/grammar extractor that converts common eligibility statements into schema-valid assertions with unit, temporality, and negation, and routes ambiguous criteria to human-must-resolve.",
+  "acceptanceCriteria": [
+    "Deterministic extraction of common patterns (age, ECOG/Lansky/Karnofsky, lab thresholds, washout windows, prior-therapy negations) with unit + temporality + negation handling.",
+    "Age-appropriate performance status: Lansky for <16, Karnofsky/ECOG for >=16, with the scale recorded.",
+    "No criterion is auto-marked complete if ambiguous; it is routed to human-must-resolve and withheld.",
+    "Extractor output validates against the eligibility schema and is deterministic/reproducible from a clean clone."
+  ],
+  "resources": [
+    "PLAN.md (section 6, pipeline stage 3)",
+    "tasks/ewing-elig-schema-001.json",
+    "src/ingest/clinicaltrials-v2.ts"
+  ],
+  "output": "src/extract/rule-extractor.ts",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "Apache-2.0"
+}

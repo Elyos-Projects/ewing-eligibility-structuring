@@ -1,0 +1,32 @@
+{
+  "id": "ewing-elig-license-003",
+  "title": "Build License Register; verify every M0 source",
+  "project": "ewing-eligibility-structuring",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "licensing", "compliance"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "No source enters the structuring pipeline until its license/terms are recorded and confirmed to permit reuse and derivatives, per the binding cancer guardrails. This License Register is a verification-before-ingest gate covering the trial registries and terminology vocabularies. Verbatim source spans stay under their source terms; the project licenses only its own annotations and structure.",
+  "objective": "Produce a per-source License Register that verifies every M0 source (ClinicalTrials.gov API v2, WHO ICTRP, EU CTIS/EudraCT, ISRCTN, and each terminology) for reuse, derivative, attribution, and redistribution terms, and records the output-licensing decision.",
+  "acceptanceCriteria": [
+    "Every source (ClinicalTrials.gov v2, ICTRP, CTIS/EudraCT, ISRCTN, and each terminology) has a row recording license/terms, reuse + derivative permission, attribution, and redistribution constraints.",
+    "Sources with unclear terms are explicitly marked excluded; NCIt confirmed as the primary terminology.",
+    "Output-license decision recorded (Apache-2.0 for code / CC-BY-4.0 for our annotations); verbatim spans kept under source terms with attribution.",
+    "Notes the ClinicalTrials.gov sponsor-copyright caveat: no non-open protocol PDFs ingested."
+  ],
+  "resources": [
+    "PLAN.md (section 9, License Register table)",
+    "ClinicalTrials.gov API v2 Terms of Use",
+    "WHO ICTRP, EU CTIS/EudraCT, ISRCTN data-use terms",
+    "NCIt, HGNC, RxNorm, LOINC, ICD-O-3, HPO, SNOMED CT license terms"
+  ],
+  "output": "docs/license-register.md",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

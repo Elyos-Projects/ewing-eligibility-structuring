@@ -1,0 +1,31 @@
+{
+  "id": "ewing-elig-code-104",
+  "title": "Terminology coding to NCIt/HGNC/RxNorm/LOINC/ICD-O-3/HPO",
+  "project": "ewing-eligibility-structuring",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "informatics", "terminology"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Structured assertions are coded to open vocabularies first (NCIt, HGNC, RxNorm, LOINC, ICD-O-3, HPO) to avoid SNOMED licensing friction, with SNOMED CT attached only as a non-redistributed secondary mapping for licensed consumers. Performance status is coded to the age-appropriate scale. Codes must validate against the named vocabulary version.",
+  "objective": "Build a terminology-coding stage that maps eligibility concepts to open vocabularies first, codes performance status to the age-appropriate scale, and attaches SNOMED CT only as a secondary mapping.",
+  "acceptanceCriteria": [
+    "Concepts map to open vocabularies first: NCIt, HGNC, RxNorm, LOINC, ICD-O-3, HPO.",
+    "Performance status coded to the age-appropriate scale (Lansky <16; Karnofsky/ECOG >=16) with scale recorded.",
+    "SNOMED CT attached only as a secondary mapping and not redistributed where prohibited.",
+    "Each code is validated to exist in the named vocabulary version; failures are flagged."
+  ],
+  "resources": [
+    "PLAN.md (section 6, pipeline stage 4)",
+    "NCIt, HGNC, RxNorm, LOINC, ICD-O-3, HPO documentation",
+    "src/extract/rule-extractor.ts"
+  ],
+  "output": "src/code/terminology.ts",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "Apache-2.0"
+}

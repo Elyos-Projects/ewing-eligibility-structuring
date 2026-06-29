@@ -1,0 +1,30 @@
+{
+  "id": "ewing-elig-adjacent",
+  "title": "Extend the model to other pediatric sarcomas once proven",
+  "project": "ewing-eligibility-structuring",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "informatics", "data-model"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Backlog/future (unscheduled). Only after the Ewing model is proven (post-M2) does the project consider extending the eligibility data model to other pediatric sarcomas. The extension keeps the open-vocabulary-first coding, 100% provenance, and not-advice constraints intact, and stays a structuring artifact, never an eligibility determination.",
+  "objective": "Specify a model extension that generalizes the eligibility data model to additional pediatric sarcomas after the Ewing model is proven.",
+  "acceptanceCriteria": [
+    "Extension is scoped to begin only after the Ewing model is proven (post-M2).",
+    "Open-vocabulary-first coding, 100% provenance, and not-advice constraints are preserved.",
+    "Scope additions are grounded in open-registry sources with verified licensing before ingest.",
+    "Remains a structuring artifact; introduces no eligibility determination or medical advice."
+  ],
+  "resources": [
+    "PLAN.md (non-goal N6; scope)",
+    "tasks/ewing-elig-schema-001.json"
+  ],
+  "output": "docs/spec/adjacent-sarcomas-extension.md",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

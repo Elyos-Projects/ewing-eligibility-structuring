@@ -1,0 +1,30 @@
+{
+  "id": "ewing-elig-outcomes-403",
+  "title": "Outcomes loop reporting (O5/O7/O8; O6 post-M3) + partner handoff",
+  "project": "ewing-eligibility-structuring",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "outcomes", "governance"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Success is measured as outcomes delivered to beneficiaries, not tasks merged, so M4 stands up the outcomes loop reporting adoption (O5), freshness (O7), and zero-harm (O8), with beneficiary usefulness (O6) reported post-M3. It documents the partner handoff and names the steward + maintainer. This task depends on a partner being secured.",
+  "objective": "Stand up outcomes-loop reporting (O5 adoption, O7 freshness, O8 zero-harm; O6 post-M3) and document the partner handoff with named steward + maintainer.",
+  "acceptanceCriteria": [
+    "Outcomes loop reports O5 (adoption), O7 (freshness), and O8 (zero-harm) on a public cadence; O6 reported after M3.",
+    "Partner handoff is documented so the partner can consume and re-publish updates.",
+    "Steward (last-mile owner) and maintainer are named.",
+    "No vanity input counts are reported as success; outcomes are beneficiary-centric."
+  ],
+  "resources": [
+    "PLAN.md (sections 4, 15)",
+    "src/corrections/intake.ts"
+  ],
+  "output": "docs/outcomes/outcomes-report.md",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

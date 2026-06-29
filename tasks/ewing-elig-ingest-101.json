@@ -1,0 +1,32 @@
+{
+  "id": "ewing-elig-ingest-101",
+  "title": "ClinicalTrials.gov v2 ingester (+ PII drop, hash, version capture)",
+  "project": "ewing-eligibility-structuring",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "informatics", "ingestion"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The pilot pipeline begins with a reproducible ingester for ClinicalTrials.gov API v2, the primary source. It pulls Ewing/pediatric-sarcoma trial records, drops investigator/contact PII at ingest, and captures registry version + retrieval timestamp + a source-text hash for drift detection. Registry records are about trials, not patients; only open registries are used.",
+  "objective": "Build a ClinicalTrials.gov API v2 ingester that queries by condition (Ewing family) and gene (EWSR1), stores raw records with registry/version/retrievedAt, drops contact PII, and hashes verbatim eligibility spans.",
+  "acceptanceCriteria": [
+    "Ingests trial records via ClinicalTrials.gov API v2 queried by condition (Ewing sarcoma / PNET / Askin / Ewing family) and by gene (EWSR1).",
+    "Stores the raw record with registry, registryVersion, and retrievedAt timestamp.",
+    "Drops investigator/contact PII (names, emails, phone) at ingest; redaction enforced.",
+    "Computes a SHA-256 hash of each verbatim eligibility source span for drift detection.",
+    "Respects API rate limits and Terms of Use; no secrets or keys written to logs."
+  ],
+  "resources": [
+    "PLAN.md (section 6, pipeline stage 1)",
+    "ClinicalTrials.gov API v2 documentation",
+    "docs/license-register.md"
+  ],
+  "output": "src/ingest/clinicaltrials-v2.ts",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "Apache-2.0"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "ewing-elig-correct-402",
+  "title": "Public correction/appeals path + triage workflow",
+  "project": "ewing-eligibility-structuring",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "ops", "safety"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "A public correction/appeals path lets clinicians, advocates, and families report errors in structured criteria, which are triaged within the freshness SLA and versioned. This is a safety mechanism: any potential harm event triggers incident review and correction. It depends on the scaled dataset being live.",
+  "objective": "Build a public correction/appeals intake and triage workflow so errors can be reported, triaged within SLA, and versioned.",
+  "acceptanceCriteria": [
+    "A public correction/appeals path lets clinicians/advocates/families report errors in structured criteria.",
+    "A triage workflow resolves reports within the freshness SLA; corrections are versioned.",
+    "Any potential harm event triggers an incident-review entry (O8).",
+    "No PII or secrets are exposed by the intake; submissions are handled per the privacy stance."
+  ],
+  "resources": [
+    "PLAN.md (sections 7, 15)",
+    "/output/releases/full-set/"
+  ],
+  "output": "src/corrections/intake.ts",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "Apache-2.0"
+}

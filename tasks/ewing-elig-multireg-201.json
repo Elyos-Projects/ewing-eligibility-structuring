@@ -1,0 +1,31 @@
+{
+  "id": "ewing-elig-multireg-201",
+  "title": "Add ICTRP/CTIS/ISRCTN ingest + cross-registry dedup",
+  "project": "ewing-eligibility-structuring",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "informatics", "ingestion"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "M2 broadens coverage beyond ClinicalTrials.gov to WHO ICTRP, EU CTIS/EudraCT, and ISRCTN using open fields only, gated on the verified License Register. Cross-registry duplicates are deduped by cross-registration IDs and tracked in a coverage ledger. PII drop, hashing, and version capture apply per source; sources with unclear terms are excluded.",
+  "objective": "Add ingest for WHO ICTRP, EU CTIS/EudraCT, and ISRCTN (open fields only) and dedupe cross-registry duplicates by cross-registration IDs into a coverage ledger.",
+  "acceptanceCriteria": [
+    "Adds ingest for WHO ICTRP, EU CTIS/EudraCT, and ISRCTN using open fields only, gated on License Register approval.",
+    "Cross-registry duplicates deduped by cross-registration IDs; coverage ledger updated.",
+    "PII drop, source-text hashing, and registry-version capture applied per source.",
+    "Sources with unclear terms are excluded; no secrets written to logs."
+  ],
+  "resources": [
+    "PLAN.md (sections 6, 9)",
+    "docs/license-register.md",
+    "src/ingest/clinicaltrials-v2.ts"
+  ],
+  "output": "src/ingest/multi-registry.ts",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "Apache-2.0"
+}

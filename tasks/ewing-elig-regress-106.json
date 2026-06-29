@@ -1,0 +1,30 @@
+{
+  "id": "ewing-elig-regress-106",
+  "title": "Wire gold-standard F1 regression gate into CI",
+  "project": "ewing-eligibility-structuring",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "ci", "evaluation"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Accuracy is a safety property, so the gold standard is wired into CI as a regression gate that blocks merges that degrade structuring accuracy. It computes per-assertion F1 (concept + operator + value) against the double-reviewed gold set. It depends on the gold standard (004) and the rule extractor (102).",
+  "objective": "Wire a gold-standard F1 regression test into CI that computes per-assertion F1 vs the double-reviewed gold set and fails the build below the target threshold.",
+  "acceptanceCriteria": [
+    "Regression test computes per-assertion F1 (concept + operator + value) vs the double-reviewed gold standard.",
+    "CI fails the build when F1 falls below the release threshold (>= 0.85).",
+    "Runs deterministically from a clean clone; results reported in CI output.",
+    "No secrets or tokens written to logs."
+  ],
+  "resources": [
+    "/output/gold-standard/ewing-gold-5trials.jsonl",
+    "src/extract/rule-extractor.ts"
+  ],
+  "output": ".github/workflows/regression.yml",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "Apache-2.0"
+}

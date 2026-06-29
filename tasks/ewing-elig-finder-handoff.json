@@ -1,0 +1,30 @@
+{
+  "id": "ewing-elig-finder-handoff",
+  "title": "Provide structured data to ewing-trial-finder",
+  "project": "ewing-eligibility-structuring",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "informatics", "integration"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Backlog/future (unscheduled). This project structures eligibility; the separate HIGH-risk ewing-trial-finder project owns matching. This handoff provides validated structured data via a documented interface while preserving the strict boundary: we never assert recruiting status as guidance, and current status is always deferred to the live registry. Not-advice + not-eligibility-determination labels are preserved across the handoff.",
+  "objective": "Provide validated structured eligibility data to the ewing-trial-finder project via a documented interface that never asserts recruiting status as guidance.",
+  "acceptanceCriteria": [
+    "Validated structured eligibility data is provided to ewing-trial-finder via a documented interface.",
+    "Recruiting status is never asserted as guidance; current status is deferred to the live registry link.",
+    "Not-advice + not-eligibility-determination labels and provenance are preserved across the handoff.",
+    "The scope boundary (we structure; finder matches) is documented and respected."
+  ],
+  "resources": [
+    "PLAN.md (non-goal N4; open question 6)",
+    "/output/releases/full-set/"
+  ],
+  "output": "docs/integrations/trial-finder-handoff.md",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

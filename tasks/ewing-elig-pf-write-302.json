@@ -1,0 +1,31 @@
+{
+  "id": "ewing-elig-pf-write-302",
+  "title": "Draft plain-language eligibility-concept explainers (sourced NCI/COG/ESMO/CCLG)",
+  "project": "ewing-eligibility-structuring",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "patient-facing", "education"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "These are education-only, plain-language explainers of what eligibility CONCEPTS mean (e.g. measurable disease, washout, performance status), never applied to any individual. They are HIGH risk and blocked from shipping without the credentialed pediatric-oncologist AND patient-advocate sign-off. Every explainer is sourced to vetted bodies with citation, carries the not-advice + not-eligibility-determination labels, and contains no individualized advice, recommendation, prognosis, or trial ranking.",
+  "objective": "Draft education-only plain-language explainers of eligibility concepts, each sourced to vetted bodies, labeled not-advice/not-eligibility, and within the reading-level rules, for the blocking expert + advocate review.",
+  "acceptanceCriteria": [
+    "Every explainer is education only; sourced to vetted bodies (NCI/COG/ESMO/CCLG) with citation.",
+    "Every explainer carries the not-advice + not-eligibility-determination labels and passes the reading-level check.",
+    "No individualized advice, recommendation, prognosis, eligibility determination, or trial ranking is present.",
+    "Content is blocked from shipping without the oncologist AND patient-advocate sign-off (recorded in 303)."
+  ],
+  "resources": [
+    "docs/patient-facing/content-spec.md",
+    "PLAN.md (roadmap M3)",
+    "Vetted bodies: NCI, COG, ESMO, CCLG"
+  ],
+  "output": "docs/patient-facing/explainers/",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

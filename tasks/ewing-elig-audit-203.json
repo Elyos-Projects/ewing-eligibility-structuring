@@ -1,0 +1,30 @@
+{
+  "id": "ewing-elig-audit-203",
+  "title": "Random expert accuracy audit (>=95% correct) + error fixes",
+  "project": "ewing-eligibility-structuring",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "informatics", "qa"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "A random expert audit is the medium-risk accuracy gate for the scaled dataset: a clinical-informatics/oncology reviewer judges a random sample for correctness, targeting >= 95% correct. Errors found are logged, fixed, and the correction is versioned. This protects against silently shipping wrong structured criteria.",
+  "objective": "Run a random expert accuracy audit of the scaled dataset, document results, and fix and version any errors found, targeting >= 95% of the sample judged correct.",
+  "acceptanceCriteria": [
+    "A random sample is reviewed by a clinical-informatics/oncology reviewer; >= 95% judged correct.",
+    "Errors are logged, fixed, and corrections are versioned in a correction log.",
+    "Audit method, sample size, and results are documented.",
+    "No individualized advice or eligibility determination is introduced; not-advice framing preserved."
+  ],
+  "resources": [
+    "PLAN.md (sections 4, 7)",
+    "/output/releases/full-set/"
+  ],
+  "output": "docs/audits/accuracy-audit-m2.md",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

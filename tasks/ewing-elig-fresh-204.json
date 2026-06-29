@@ -1,0 +1,31 @@
+{
+  "id": "ewing-elig-fresh-204",
+  "title": "Freshness/refresh job: hash drift + staleness flagging",
+  "project": "ewing-eligibility-structuring",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "informatics", "ops"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Registry text changes frequently, so a freshness job re-pulls sources, compares stored source-text hashes, and flags drift and stale claims. Recruiting status is never asserted as guidance; current status is always deferred to the live registry link. Staleness is flagged automatically within the 30-day SLA.",
+  "objective": "Build a freshness/refresh job that re-pulls sources, compares sourceTextSha256 to detect drift, and flags stale records within the refresh SLA without ever asserting recruiting status.",
+  "acceptanceCriteria": [
+    "Refresh re-pulls sources and compares sourceTextSha256 to detect drift.",
+    "Drift and stale 'recruiting' claims are flagged automatically within the 30-day SLA.",
+    "Current status is deferred to the live registry link and never asserted as guidance.",
+    "No secrets written to logs; job runs reproducibly."
+  ],
+  "resources": [
+    "PLAN.md (sections 6, 15)",
+    "src/ingest/clinicaltrials-v2.ts",
+    "/output/releases/full-set/"
+  ],
+  "output": "src/refresh/freshness-job.ts",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "Apache-2.0"
+}

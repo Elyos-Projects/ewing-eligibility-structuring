@@ -1,0 +1,35 @@
+{
+  "id": "ewing-elig-schema-001",
+  "title": "Design eligibility data model v0.1 (JSON Schema, FHIR-aligned)",
+  "project": "ewing-eligibility-structuring",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "informatics", "fhir"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Ewing sarcoma trial eligibility lives as dense free-text inclusion/exclusion blocks across registries (ClinicalTrials.gov, ICTRP, CTIS, ISRCTN). To structure it safely we first need an open, versioned data model that represents each criterion as a coded, comparable, fully-provenanced assertion. Cancer guardrails are binding: open-access data only, no patient/identifiable data, provenance on every assertion, and the model must never function as an eligibility determination or medical advice.",
+  "objective": "Produce eligibility data model v0.1 as a draft-07 JSON Schema (FHIR ResearchStudy/eligibility-aligned, OMOP-mappable) that makes provenance and a not-advice/not-eligibility disclaimer REQUIRED, and supports concept coding, operators, values/units, temporality, negation, ambiguity flags, and age-appropriate performance status.",
+  "acceptanceCriteria": [
+    "Schema validates with AJV (draft-07), styled consistently with packages/schema.",
+    "Models concept {system,code,display}, operator, value, unit, temporality, negation, ageBandYears, performanceStatus {scale: Lansky|Karnofsky|ECOG}, ambiguityFlag, confidence, extraction.method.",
+    "Provenance block is REQUIRED: trialId, registry, registryVersion, retrievedAt, sourceText, sourceTextSha256, reviewer, status.",
+    "A fixed not-advice + not-eligibility-determination disclaimer field is REQUIRED on every record.",
+    "Includes documented FHIR ResearchStudy/eligibility alignment and an OMOP-CDM mapping note.",
+    "Contains no patient-level or contact-PII fields; example records use synthetic/redacted data only."
+  ],
+  "resources": [
+    "C:/code/elyos/packages/schema/src/schemas.ts",
+    "ClinicalTrials.gov API v2 documentation",
+    "HL7 FHIR ResearchStudy / EBM-on-FHIR eligibility profiles",
+    "OHDSI OMOP CDM specification",
+    "NCI Thesaurus (NCIt), HGNC, RxNorm, LOINC, ICD-O-3, HPO"
+  ],
+  "output": "A draft-07 JSON Schema file (eligibility-criterion.schema.json) plus a short spec document describing fields, FHIR alignment, OMOP mapping, and the required provenance + disclaimer model.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -187,6 +187,53 @@ reporting adoption, freshness, and zero-harm; steward + maintainer named; partne
 
 ---
 
+## Generated task index
+
+Every milestone-table row and every sized backlog row above now has a corresponding
+schema-valid `tasks/<id>.json` (validated against `packages/schema/src/schemas.ts`). The full,
+per-task acceptance criteria live in those JSON files; the "Acceptance criteria — key tasks"
+blocks above remain the human-readable summary for the most important rows. All tasks carry
+`status: open`, `verifiedNeed: false`, and `requestor: "TO BE SECURED"`; code/PR tasks use
+`outputLicense: Apache-2.0`, data/doc/spec tasks use `CC-BY-4.0`; all patient-facing (M3 + two
+backlog) tasks carry `riskTier: high`.
+
+**Fan-out note (honest, bounded):** no row was fanned out into per-item tasks. The plan sizes the
+trial sets by count (gold = 5 trials, pilot = 25 trials, M2 = full open set) but does **not**
+enumerate specific trial IDs, and names no concrete language set (translation is the separate
+HIGH-risk `ewing-info-translations` project, out of scope in v1). Per the fan-out policy, these
+remain single representative tasks; per-trial / per-language items expand only on partner + scope
+confirmation. No languages, datasets, trials, or beneficiaries were fabricated.
+
+**Guardrail note:** no task authors refused content. The M3 patient-facing tasks
+(`ewing-elig-pf-spec-301`, `-pf-write-302`, `-pf-review-303`) and the two patient-facing backlog
+tasks (`ewing-elig-eu-translate`, `ewing-elig-finder-handoff`) are **education-only / structuring
+/ handoff** tasks that never produce medical advice, prognosis, eligibility determinations, or
+trial rankings. Each preserves the binding HIGH-risk blocking gate (credentialed pediatric
+oncologist **and** patient advocate sign-off, recorded by name/credential/date) verbatim in its
+`context`/`acceptanceCriteria`, and does not start until a partner + expert panel are secured.
+
+Generated ids (27 total; `ewing-elig-schema-001` is the pre-existing seed):
+
+- **M0:** `ewing-elig-schema-001` (seed), `ewing-elig-guard-002`, `ewing-elig-license-003`,
+  `ewing-elig-gold-004`, `ewing-elig-ci-005`
+- **M1:** `ewing-elig-ingest-101`, `ewing-elig-rules-102`, `ewing-elig-llm-103`,
+  `ewing-elig-code-104`, `ewing-elig-pilot-105`, `ewing-elig-regress-106`
+- **M2:** `ewing-elig-multireg-201`, `ewing-elig-scale-202`, `ewing-elig-audit-203`,
+  `ewing-elig-fresh-204`, `ewing-elig-fhir-205`
+- **M3 (HIGH risk, conditional):** `ewing-elig-pf-spec-301`, `ewing-elig-pf-write-302`,
+  `ewing-elig-pf-review-303`
+- **M4:** `ewing-elig-ops-401`, `ewing-elig-correct-402`, `ewing-elig-outcomes-403`
+- **Backlog/future:** `ewing-elig-eu-translate`, `ewing-elig-snomed-map`, `ewing-elig-benchmark`,
+  `ewing-elig-finder-handoff`, `ewing-elig-adjacent`
+
+> Note on `ewing-elig-llm-103` lane: building the LLM-assist adapter is donated code work, so the
+> task is `lane: donated`. The PLAN's funded/budget-capped behavior is a runtime property of the
+> adapter (it runs only via `packages/runner` under a hard per-trial cap) and is captured in the
+> task's acceptance criteria; no `fundedBudgetUsd` cap is asserted because the plan's Open
+> Question 5 leaves the per-trial cap undecided (not fabricated here).
+
+---
+
 ## Example task JSON (first M0 task)
 
 Schema-valid against `packages/schema/src/schemas.ts` (donated lane, so no `fundedBudgetUsd`).

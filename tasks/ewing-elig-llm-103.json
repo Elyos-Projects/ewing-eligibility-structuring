@@ -1,0 +1,31 @@
+{
+  "id": "ewing-elig-llm-103",
+  "title": "LLM-assist extractor adapter (funded, budget-capped, review-only output)",
+  "project": "ewing-eligibility-structuring",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "informatics", "llm"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "For harder eligibility prose the project adds an LLM-assist extractor behind a vendor-neutral adapter, keeping the agent-neutral core free of vendor logic. Building the adapter is donated code work; at runtime the extraction itself runs via packages/runner on the funded lane with a hard per-trial budget cap. LLM output is never auto-merged and always enters the human-review queue.",
+  "objective": "Build an LLM-assist extractor adapter behind the provider interface that runs only via packages/runner under a hard fundedBudgetUsd per-trial cap and routes all output to human review.",
+  "acceptanceCriteria": [
+    "Adapter runs only via packages/runner with a hard fundedBudgetUsd per-trial cap; never exceeds the cap.",
+    "LLM output is never auto-merged; it always enters the human-review queue.",
+    "No secrets, keys, or tokens appear in logs, receipts, or output.",
+    "Adapter lives behind the vendor-neutral provider interface; the agent-neutral core stays vendor-neutral per CLAUDE.md."
+  ],
+  "resources": [
+    "PLAN.md (sections 6, 14)",
+    "C:/code/elyos/CLAUDE.md (architecture rules, funded lane)",
+    "src/extract/rule-extractor.ts"
+  ],
+  "output": "adapters/llm-extractor/index.ts",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "Apache-2.0"
+}

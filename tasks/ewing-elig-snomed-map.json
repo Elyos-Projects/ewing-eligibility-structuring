@@ -1,0 +1,31 @@
+{
+  "id": "ewing-elig-snomed-map",
+  "title": "Fuller SNOMED CT secondary mapping for licensed consumers",
+  "project": "ewing-eligibility-structuring",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "informatics", "terminology"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Backlog/future (unscheduled). Open vocabularies remain primary; this task adds a fuller SNOMED CT secondary mapping for consumers that are already SNOMED-licensed. SNOMED codes are never redistributed where prohibited and the primary open-vocabulary codes are always retained.",
+  "objective": "Add a fuller SNOMED CT secondary mapping layer for already-licensed consumers without redistributing SNOMED where prohibited.",
+  "acceptanceCriteria": [
+    "Adds SNOMED CT codes only as a secondary mapping; primary open-vocabulary codes are retained.",
+    "SNOMED content is not redistributed where the affiliate license prohibits it.",
+    "Mapping is validated and gated so unlicensed consumers receive only the open-vocabulary codes.",
+    "No license terms are violated; provenance is preserved."
+  ],
+  "resources": [
+    "PLAN.md (sections 5, 9)",
+    "src/code/terminology.ts",
+    "SNOMED CT affiliate license terms"
+  ],
+  "output": "src/code/snomed-map.ts",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "Apache-2.0"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "ewing-elig-guard-002",
+  "title": "Author guardrail + not-advice + provenance policy",
+  "project": "ewing-eligibility-structuring",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "governance", "safety"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Before any Ewing sarcoma trial-eligibility data is structured, the project must ratify the binding cancer guardrails as a written, citable policy. This is a childhood-cancer domain where a wrong 'you qualify / you don't' can cost a family a trial slot, so correctness and humility are treated as safety properties. The structured data is a research artifact and is never an eligibility determination or medical advice.",
+  "objective": "Write the project's guardrail, not-advice, and provenance policy document that ratifies open-access-data-only, per-source license verification before ingest, 100% provenance on every assertion, the fixed not-advice/not-eligibility disclaimer string, and the HIGH-risk patient-facing blocking sign-off.",
+  "acceptanceCriteria": [
+    "Policy ratifies the binding cancer guardrails: open-access/aggregate/de-identified data only; no patient-level or identifiable data; controlled-access (dbGaP/EGA) out of scope.",
+    "Defines the exact fixed not-advice + not-eligibility-determination disclaimer string carried on every record and release.",
+    "States provenance-on-every-assertion as a hard, schema-enforced gate (O2 = 100%); no assertion ships without full lineage.",
+    "States the refusal guardrails (no individualized advice, eligibility determination, prognosis, or trial ranking) and the patient-facing HIGH-risk BLOCKING sign-off (credentialed pediatric oncologist AND patient advocate, recorded by name/credential/date).",
+    "Requires per-source license verification before ingest; sources with unclear terms are excluded."
+  ],
+  "resources": [
+    "PLAN.md (sections 7, 9)",
+    "C:/code/elyos/CLAUDE.md (refusal guardrails)"
+  ],
+  "output": "docs/policy/guardrails-and-not-advice.md",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

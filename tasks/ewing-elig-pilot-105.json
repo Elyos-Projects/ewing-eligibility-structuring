@@ -1,0 +1,31 @@
+{
+  "id": "ewing-elig-pilot-105",
+  "title": "Release 25-trial pilot dataset (100% provenance) + Zenodo DOI",
+  "project": "ewing-eligibility-structuring",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "informatics", "dataset"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The M1 milestone deliverable is a provenanced 25-trial pilot dataset produced by the pipeline and measured against the gold standard. Provenance is a hard gate: validation blocks release unless every assertion has full lineage. Every record carries the not-advice + not-eligibility-determination disclaimer; the dataset is a research artifact, never an eligibility determination.",
+  "objective": "Release a 25-trial pilot eligibility dataset with 100% provenance, F1 >= 0.85 vs the gold standard, cross-registry dedup, the not-advice disclaimer on every record, and a minted Zenodo DOI.",
+  "acceptanceCriteria": [
+    "25 trials released; 100% provenance on every assertion (validation blocks release otherwise).",
+    "Per-assertion F1 >= 0.85 vs the gold standard; ambiguity items withheld; cross-registry duplicates deduped.",
+    "Every record carries the not-advice + not-eligibility-determination disclaimer; licensed CC-BY-4.0; Zenodo DOI minted.",
+    "No investigator/contact PII; no secrets leaked."
+  ],
+  "resources": [
+    "PLAN.md (roadmap M1)",
+    "/output/gold-standard/ewing-gold-5trials.jsonl",
+    "src/code/terminology.ts"
+  ],
+  "output": "/output/releases/pilot-25/",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "ewing-elig-ci-005",
+  "title": "CI: schema validation + PII-redaction check scaffold",
+  "project": "ewing-eligibility-structuring",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "ci", "tooling"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "CI must enforce the two earliest hard gates: every eligibility record validates against the schema, and no investigator/contact PII leaks into the dataset. This scaffold runs from a clean clone and fails the build on any invalid record or detected PII field. It depends on the schema design (001).",
+  "objective": "Scaffold CI that runs AJV schema validation over all eligibility records and a PII-redaction check that fails the build if any investigator/contact field is present.",
+  "acceptanceCriteria": [
+    "CI runs AJV (draft-07) validation against the eligibility schema on every PR and fails on any invalid record.",
+    "PII-redaction check scans records for investigator/contact fields (names, emails, phone) and fails the build if any are present.",
+    "Pipeline runs reproducibly from a clean clone; CI configuration documented.",
+    "No secrets or tokens are written to logs."
+  ],
+  "resources": [
+    "tasks/ewing-elig-schema-001.json",
+    "C:/code/elyos/packages/schema/src/schemas.ts"
+  ],
+  "output": ".github/workflows/validate.yml",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "Apache-2.0"
+}

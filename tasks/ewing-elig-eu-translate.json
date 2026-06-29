@@ -1,0 +1,31 @@
+{
+  "id": "ewing-elig-eu-translate",
+  "title": "Hand off vetted explainers to ewing-info-translations",
+  "project": "ewing-eligibility-structuring",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "patient-facing", "translation"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Backlog/future (unscheduled). Once patient-facing explainers pass the M3 oncologist + advocate blocking gate, they can be packaged for handoff to the separate HIGH-risk ewing-info-translations project, which owns translation under its own expert gate. Translation itself is out of scope here; this task only assembles vetted, signed-off, fully-provenanced explainers and their citations for handoff. No relicensing of copyrighted source.",
+  "objective": "Package the vetted, signed-off plain-language explainers with provenance and citations for handoff to the ewing-info-translations project.",
+  "acceptanceCriteria": [
+    "Only explainers that passed the M3 oncologist + advocate blocking sign-off are eligible for handoff.",
+    "The handoff package preserves provenance, citations, and the not-advice + not-eligibility-determination labels.",
+    "Translation is performed under the ewing-info-translations project's own HIGH-risk gate, not here.",
+    "Licensing is source-compatible; no copyrighted source is relicensed."
+  ],
+  "resources": [
+    "docs/patient-facing/explainers/",
+    "docs/patient-facing/signoff-and-survey.md",
+    "PLAN.md (scope; out-of-scope translation)"
+  ],
+  "output": "docs/patient-facing/translation-handoff.md",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

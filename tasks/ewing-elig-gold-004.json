@@ -1,0 +1,33 @@
+{
+  "id": "ewing-elig-gold-004",
+  "title": "Manually structure + independently double-review 5 trials (gold standard)",
+  "project": "ewing-eligibility-structuring",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "informatics", "annotation"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The gold standard is the accuracy anchor for the whole project: 5 Ewing/pediatric-sarcoma trials manually structured and independently double-reviewed before any pipeline scale-up. It depends on the schema (001), guardrail policy (002), and verified License Register (003). Trials are drawn only from open registries; provenance is required on every assertion and ambiguous criteria are flagged, never guessed.",
+  "objective": "Manually structure the eligibility criteria of 5 open-registry Ewing/pediatric-sarcoma trials into schema-valid records, independently annotated by two reviewers and adjudicated, to serve as the double-reviewed gold standard.",
+  "acceptanceCriteria": [
+    "5 trials structured independently by 2 annotators; Cohen's kappa >= 0.75; all disagreements adjudicated.",
+    "100% provenance on every assertion (trialId, registry, registryVersion, retrievedAt, verbatim sourceText, sourceTextSha256, reviewer, status).",
+    "Ambiguous or under-specified criteria are flagged human-must-resolve, not guessed.",
+    "No investigator/contact PII present; records validate against the eligibility schema.",
+    "Trials sourced only from open registries; verbatim source spans and SHA-256 hashes recorded."
+  ],
+  "resources": [
+    "tasks/ewing-elig-schema-001.json (eligibility data model v0.1)",
+    "docs/policy/guardrails-and-not-advice.md",
+    "docs/license-register.md",
+    "ClinicalTrials.gov API v2"
+  ],
+  "output": "/output/gold-standard/ewing-gold-5trials.jsonl",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

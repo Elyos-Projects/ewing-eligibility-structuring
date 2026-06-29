@@ -1,0 +1,30 @@
+{
+  "id": "ewing-elig-pf-review-303",
+  "title": "Blocking expert + advocate sign-off + beneficiary usefulness survey",
+  "project": "ewing-eligibility-structuring",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "patient-facing", "governance"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "This is the HIGH-risk BLOCKING gate for the patient-facing layer: nothing ships until BOTH a credentialed pediatric oncologist and a patient advocate sign off, recorded by name/credential/date. It also captures the partner's last-mile commitment and runs the beneficiary usefulness survey (O6). Without both sign-offs and a committed partner, no patient-facing deed ships.",
+  "objective": "Record the blocking oncologist + patient-advocate sign-off (name/credential/date) for the patient-facing explainers and run the partner-committed beneficiary usefulness survey.",
+  "acceptanceCriteria": [
+    "Both a credentialed pediatric oncologist and a patient advocate sign off, each recorded with name/credential/date; nothing ships without both.",
+    "A partner is committed to the last-mile handoff and runs the beneficiary usefulness survey (O6).",
+    "Any explainer failing review is withheld and returned for revision; no overrides of the blocking gate.",
+    "Not-advice + not-eligibility-determination labels and vetted sourcing are confirmed present on every shipped artifact."
+  ],
+  "resources": [
+    "docs/patient-facing/explainers/",
+    "PLAN.md (section 7 gate 5, roadmap M3)"
+  ],
+  "output": "docs/patient-facing/signoff-and-survey.md",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "ewing-elig-scale-202",
+  "title": "Structure full open Ewing/pediatric-sarcoma set",
+  "project": "ewing-eligibility-structuring",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "informatics", "dataset"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "M2 scales structuring to the full agreed open-registry Ewing/adjacent pediatric-sarcoma set with a higher accuracy bar. Provenance stays a 100% hard gate and a coverage ledger is published. SNOMED secondary mappings are added only where the consumer is licensed; every record carries the not-advice disclaimer and ambiguous criteria are withheld.",
+  "objective": "Structure the full agreed open-registry Ewing/pediatric-sarcoma set at F1 >= 0.90 with 100% provenance and a published coverage ledger.",
+  "acceptanceCriteria": [
+    "Coverage equals the agreed open-registry Ewing/adjacent set; per-assertion F1 >= 0.90; 100% provenance.",
+    "Coverage ledger published; SNOMED CT secondary mappings only where the consumer is licensed.",
+    "Every record carries the not-advice + not-eligibility-determination disclaimer; ambiguity items withheld.",
+    "No investigator/contact PII; cross-registry duplicates deduped."
+  ],
+  "resources": [
+    "PLAN.md (roadmap M2)",
+    "src/ingest/multi-registry.ts",
+    "src/code/terminology.ts"
+  ],
+  "output": "/output/releases/full-set/",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

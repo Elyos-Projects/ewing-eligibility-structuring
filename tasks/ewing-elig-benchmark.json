@@ -1,0 +1,30 @@
+{
+  "id": "ewing-elig-benchmark",
+  "title": "Publish open eligibility-structuring benchmark from the gold standard",
+  "project": "ewing-eligibility-structuring",
+  "type": "data",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "informatics", "benchmark"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Backlog/future (unscheduled). The double-reviewed gold standard can seed an open eligibility-structuring benchmark for this rare disease, with methodology aligned to the Chia corpus (methods reused only, not Chia's data). The benchmark is a research good with 100% provenance and the not-advice disclaimer; it never functions as an eligibility determination.",
+  "objective": "Publish an open eligibility-structuring benchmark derived from the gold standard, with methodology aligned to the Chia corpus.",
+  "acceptanceCriteria": [
+    "Benchmark is released (CC-BY-4.0) derived from the double-reviewed gold standard.",
+    "Methodology is aligned with and cites the Chia corpus; only methods are reused, not Chia's Ewing data.",
+    "100% provenance on every assertion; not-advice + not-eligibility-determination disclaimer present.",
+    "No investigator/contact PII; ambiguous criteria withheld."
+  ],
+  "resources": [
+    "/output/gold-standard/ewing-gold-5trials.jsonl",
+    "Kury et al., Chia corpus (Scientific Data, 2020, CC-BY-4.0)"
+  ],
+  "output": "/output/benchmark/",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

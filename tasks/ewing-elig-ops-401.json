@@ -1,0 +1,30 @@
+{
+  "id": "ewing-elig-ops-401",
+  "title": "Scheduled refresh + release automation + changelog",
+  "project": "ewing-eligibility-structuring",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "ops", "release"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "M4 makes the dataset sustainable: a scheduled refresh runs the freshness job, and release automation cuts versioned, checksummed releases with a changelog and Zenodo DOI. Releases are DCO-signed and never include secrets. This keeps stale 'recruiting' claims from standing and makes corrections traceable.",
+  "objective": "Automate the scheduled refresh and the versioned release process with a changelog and checksummed, DCO-signed releases.",
+  "acceptanceCriteria": [
+    "Scheduled refresh runs the freshness job and triggers re-verification on a defined cadence.",
+    "Release automation produces versioned, checksummed releases with a changelog and Zenodo DOI.",
+    "Releases are DCO-signed; no secrets or tokens appear in logs, receipts, or artifacts.",
+    "Each release marks 'last verified <date>' so stale data is not mistaken for current."
+  ],
+  "resources": [
+    "PLAN.md (sections 6, 15)",
+    "src/refresh/freshness-job.ts"
+  ],
+  "output": ".github/workflows/release.yml",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "Apache-2.0"
+}

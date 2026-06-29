@@ -1,0 +1,32 @@
+{
+  "id": "ewing-elig-pf-spec-301",
+  "title": "Patient-facing content spec + not-advice template + reading-level rules",
+  "project": "ewing-eligibility-structuring",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["oncology", "clinical-trials", "ewing-sarcoma", "patient-facing", "safety"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "M3 is the HIGH-risk patient-facing layer and starts only if a partner AND the credentialed pediatric-oncologist + patient-advocate panel are secured. This spec defines education-only scope, the not-advice/not-eligibility-determination template, vetted sourcing, and the BLOCKING sign-off, before any explainer is written. It produces no patient-facing claims itself; it sets the rules and the gate. verifiedNeed stays false until a partner is secured.",
+  "objective": "Specify the patient-facing content spec: education-only scope, the not-advice/not-eligibility-determination template, reading-level rules, vetted sourcing, and the blocking oncologist + advocate sign-off requirement.",
+  "acceptanceCriteria": [
+    "Defines education-only scope and an explicit not-advice + not-eligibility-determination template applied to every artifact.",
+    "Specifies reading-level rules and a plain-language check for all patient-facing content.",
+    "Requires sourcing to vetted bodies (NCI/COG/ESMO/CCLG) with citation format.",
+    "States the BLOCKING gate: credentialed pediatric oncologist AND patient advocate sign-off (name/credential/date) before anything ships; no exceptions.",
+    "Does not start until a partner + expert panel are secured; verifiedNeed remains false."
+  ],
+  "resources": [
+    "PLAN.md (sections 7, roadmap M3)",
+    "C:/code/elyos/CLAUDE.md (refusal guardrails)",
+    "Vetted bodies: NCI, COG, ESMO, CCLG"
+  ],
+  "output": "docs/patient-facing/content-spec.md",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
